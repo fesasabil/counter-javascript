@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+
+        body {
+            background-image:url(image/kapal2.jpg);
+            background-size: cover;
+        }
+        
+        header {
+            margin-top: 15%;
+            color: white;
+            font-size: 40px;
+            text-align: center;
+        }
+        
+        
+        #time {
+            text-align: center;
+            color: white;
+            
+        }
+        
+        #kata {
+            text-align: center;
+            color: white;
+        }
+        
+        #sub {
+            text-align: center;
+            color: white;
+        } 
+        
+        .ao{
+            text-align: center;
+            margin-left: 48%;
+            padding-right: 5px;
+            padding-left: 5px;
+            width: 20px;
+            
+        }
+        
+        .ak{
+            text-align: center;
+            margin-right: 5p;
+            padding-left: 5px;
+            width: 20px;
+             
+        }
+        
+        .ay {
+            color: white;
+        }
+    
+    
+    
+    
+    </style>
+</head>
+<body>
+    <div class="semua" id="sama">
+    <header id="text-center">Selamat Datang</header>
+    <h1 id="time">5:14</h1>
+    <h2 id="kata">Pilih Nomor Anda</h2>
+    <h3 id="sub">0</h3>
+    
+    <button type="button" class="btn btn-outline-light ao" id="plus-button">+</button>
+    <button type="button" class="btn btn-outline-light ak" id="minus-button">-</button>
+
+    
+    
+    <script>
+        var number = 0;
+        var jaidDOM = document.getElementById('kata');
+        var subDOM = document.getElementById('sub');
+        
+        var plusDOM = document.getElementById('plus-button');
+        var minusDOM = document.getElementById('minus-button');
+        
+        plusDOM.addEventListener('click', function () {
+            console.log('Nilai number sekarang: ' + number)
+            console.log('tombol plus diklik')
+            number = number + 1;
+            console.log('Nilai number sekarang:' + number)
+            subDOM.innerHTML = number
+                })
+        
+        minusDOM.addEventListener('click', function () {
+            console.log('Nilai number sekarang: ' + number)
+            console.log('tombol minus di klik')
+            number = number - 1;
+            console.log('Nilai number sekarang: ' + number)
+            subDOM.innerHTML = number
+                })
+        
+        </script>
+        <script src="js/lib/time.js"></script>
+        <div class="fixed-bottom">
+        <footer class="text-center ay">Copyright 2018 azzaid.com</footer></div>
+    </div>
+</body>
+</html>
