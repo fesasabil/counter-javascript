@@ -88,15 +88,21 @@
             number = number + 1;
             console.log('Nilai number sekarang:' + number)
             subDOM.innerHTML = number
-                })
+        })
         
         minusDOM.addEventListener('click', function () {
             console.log('Nilai number sekarang: ' + number)
             console.log('tombol minus di klik')
             number = number - 1;
             console.log('Nilai number sekarang: ' + number)
-            subDOM.innerHTML = number
-                })
+            if(number > -1) {
+
+                subDOM.innerHTML = number
+            }else{
+                alert('tidak bisa')
+            }
+
+        })
         
         </script>
         <script src="js/lib/time.js"></script>
